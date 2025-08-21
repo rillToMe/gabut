@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Settings</title>
+  <link rel="stylesheet" href="assets/css/style.css"/>
+</head>
+<body>
+  <header class="site-header">
+    <h1>🌙 Dream Hub</h1>
+    <nav class="nav">
+      <a href="/index.html">Beranda</a>
+      <a href="/goals.html">Mimpi</a>
+      <a href="/roadmap.html">Roadmap</a>
+      <a href="/habits.html">Kebiasaan</a>
+      <a href="/journal.html">Jurnal</a>
+      <a href="/explore.html">Eksplorasi</a>
+      <a href="/stats.html">Statistik</a>
+      <a href="/settings.html" class="active">Pengaturan</a>
+    </nav>
+  </header>
+
+  <main class="container">
+    <section class="card">
+      <h2>Backup & Restore</h2>
+      <div class="actions">
+        <button id="btnExport" class="btn-primary">Export Data (.json)</button>
+        <label class="btn-outline" style="cursor:pointer">
+          Import Data
+          <input id="importFile" type="file" accept="application/json" hidden />
+        </label>
+      </div>
+      <p class="muted">Data yang dicadangkan: goals, tasks, habits, journal.</p>
+    </section>
+  </main>
+
+  <script type="module" src="assets/js/modules/settings.js"></script>
+</body>
+</html>

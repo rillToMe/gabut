@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Roadmap</title>
+  <link rel="stylesheet" href="assets/css/style.css"/>
+</head>
+<body>
+  <header class="site-header">
+    <h1>🌙 Dream Hub</h1>
+    <nav class="nav">
+      <a href="/index.html">Beranda</a>
+      <a href="/goals.html">Mimpi</a>
+      <a href="/roadmap.html" class="active">Roadmap</a>
+      <a href="/habits.html">Kebiasaan</a>
+      <a href="/journal.html">Jurnal</a>
+      <a href="/explore.html">Eksplorasi</a>
+      <a href="/stats.html">Statistik</a>
+      <a href="/settings.html">Pengaturan</a>
+    </nav>
+  </header>
+
+  <main class="container">
+    <section class="card">
+      <h2>Tambah Tugas</h2>
+      <form id="taskForm" autocomplete="off">
+        <div class="row">
+          <label for="tTitle">Judul</label>
+          <input id="tTitle" type="text" placeholder="Contoh: Riset perlengkapan studio" required />
+        </div>
+        <div class="row">
+          <label for="tGoal">Tautkan ke Mimpi</label>
+          <select id="tGoal"></select>
+        </div>
+        <div class="row">
+          <label for="tDue">Jatuh Tempo</label>
+          <input id="tDue" type="date" />
+        </div>
+        <div class="row">
+          <label for="tPriority">Prioritas</label>
+          <select id="tPriority">
+            <option value="2">Normal</option>
+            <option value="1">Tinggi</option>
+            <option value="3">Rendah</option>
+          </select>
+        </div>
+        <div class="actions">
+          <button class="btn-primary" type="submit">Tambah</button>
+        </div>
+      </form>
+    </section>
+
+    <section class="card">
+      <header class="card-header">
+        <h2>Daftar Tugas</h2>
+        <div class="filters">
+          <select id="tfGoal"></select>
+          <input id="tfSearch" type="search" placeholder="Cari tugas…" />
+        </div>
+      </header>
+      <ul id="taskList" class="dream-list"></ul>
+    </section>
+  </main>
+
+  <script type="module" src="assets/js/modules/tasks.js"></script>
+</body>
+</html>

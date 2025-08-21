@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Dream Hub - Home</title>
+  <link rel="stylesheet" href="assets/css/style.css"/>
+</head>
+<body>
+  <header class="site-header">
+    <h1>🌙 Dream Hub</h1>
+    <nav class="nav">
+      <a href="/index.html" class="active">Beranda</a>
+      <a href="/goals.html">Mimpi</a>
+      <a href="/roadmap.html">Roadmap</a>
+      <a href="/habits.html">Kebiasaan</a>
+      <a href="/journal.html">Jurnal</a>
+      <a href="/explore.html">Eksplorasi</a>
+      <a href="/stats.html">Statistik</a>
+      <a href="/settings.html">Pengaturan</a>
+    </nav>
+  </header>
+
+  <main class="container">
+    <section class="card">
+      <h2>Ringkasan Hari Ini</h2>
+      <div class="grid-3">
+        <div class="mini-card"><h3>Progress Mimpi</h3><p id="sumGoals">0 selesai</p></div>
+        <div class="mini-card"><h3>Streak Habit</h3><p id="sumStreak">0 hari</p></div>
+        <div class="mini-card"><h3>Tugas Terdekat</h3><p id="sumTasks">-</p></div>
+      </div>
+    </section>
+
+    <section class="card">
+      <h2>Quick Actions</h2>
+      <div class="actions">
+        <a href="/goals.html" class="btn-primary">Lihat Mimpi</a>
+        <a href="/roadmap.html" class="btn-outline">Cek Tugas</a>
+        <a href="/habits.html" class="btn-outline">Update Habit</a>
+      </div>
+    </section>
+
+    <section class="card">
+      <h2>Quote untuk kamu</h2>
+      <p id="quote" class="muted">Loading…</p>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <small>© <span id="year"></span> Dream Hub</small>
+  </footer>
+
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

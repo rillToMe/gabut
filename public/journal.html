@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Jurnal</title>
+  <link rel="stylesheet" href="assets/css/style.css"/>
+</head>
+<body>
+  <header class="site-header">
+    <h1>🌙 Dream Hub</h1>
+    <nav class="nav">
+      <a href="/index.html">Beranda</a>
+      <a href="/goals.html">Mimpi</a>
+      <a href="/roadmap.html">Roadmap</a>
+      <a href="/habits.html">Kebiasaan</a>
+      <a href="/journal.html" class="active">Jurnal</a>
+      <a href="/explore.html">Eksplorasi</a>
+      <a href="/stats.html">Statistik</a>
+      <a href="/settings.html">Pengaturan</a>
+    </nav>
+  </header>
+
+  <main class="container">
+    <section class="card">
+      <h2>Catatan Hari Ini</h2>
+      <form id="journalForm" autocomplete="off">
+        <div class="row">
+          <label for="jDate">Tanggal</label>
+          <input id="jDate" type="date" />
+        </div>
+        <div class="row">
+          <label for="jMood">Mood</label>
+          <select id="jMood">
+            <option value="1">😊 Positif</option>
+            <option value="0">😐 Netral</option>
+            <option value="-1">☹️ Kurang</option>
+          </select>
+        </div>
+        <div class="row">
+          <label for="jText">Catatan</label>
+          <input id="jText" type="text" placeholder="1–3 kalimat…" required />
+        </div>
+        <div class="actions">
+          <button class="btn-primary" type="submit">Simpan</button>
+        </div>
+      </form>
+    </section>
+
+    <section class="card">
+      <header class="card-header">
+        <h2>Riwayat</h2>
+        <div class="filters">
+          <input id="jfSearch" type="search" placeholder="Cari catatan…" />
+        </div>
+      </header>
+      <ul id="journalList" class="dream-list"></ul>
+    </section>
+  </main>
+
+  <script type="module" src="assets/js/modules/journal.js"></script>
+</body>
+</html>

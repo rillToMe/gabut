@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Habits</title>
+  <link rel="stylesheet" href="assets/css/style.css"/>
+</head>
+<body>
+  <header class="site-header">
+    <h1>🌙 Dream Hub</h1>
+    <nav class="nav">
+      <a href="/index.html">Beranda</a>
+      <a href="/goals.html">Mimpi</a>
+      <a href="/roadmap.html">Roadmap</a>
+      <a href="/habits.html" class="active">Kebiasaan</a>
+      <a href="/journal.html">Jurnal</a>
+      <a href="/explore.html">Eksplorasi</a>
+      <a href="/stats.html">Statistik</a>
+      <a href="/settings.html">Pengaturan</a>
+    </nav>
+  </header>
+
+  <main class="container">
+    <section class="card">
+      <h2>Tambah Kebiasaan</h2>
+      <form id="habitForm" autocomplete="off">
+        <div class="row">
+          <label for="hTitle">Nama Habit</label>
+          <input id="hTitle" type="text" placeholder="Contoh: Push-up 20x" required />
+        </div>
+        <div class="row">
+          <label for="hSchedule">Jadwal</label>
+          <select id="hSchedule">
+            <option value="daily">Harian</option>
+            <option value="weekly">Mingguan</option>
+          </select>
+        </div>
+        <div class="actions">
+          <button class="btn-primary" type="submit">Tambah</button>
+        </div>
+      </form>
+    </section>
+
+    <section class="card">
+      <header class="card-header">
+        <h2>Tracker</h2>
+        <div class="filters">
+          <input id="hfSearch" type="search" placeholder="Cari habit…" />
+        </div>
+      </header>
+      <ul id="habitList" class="dream-list"></ul>
+    </section>
+  </main>
+
+  <script type="module" src="assets/js/modules/habits.js"></script>
+</body>
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Eksplorasi</title>
+  <link rel="stylesheet" href="assets/css/style.css"/>
+</head>
+<body>
+  <header class="site-header">
+    <h1>🌙 Dream Hub</h1>
+    <nav class="nav">
+      <a href="/index.html">Beranda</a>
+      <a href="/goals.html">Mimpi</a>
+      <a href="/roadmap.html">Roadmap</a>
+      <a href="/habits.html">Kebiasaan</a>
+      <a href="/journal.html">Jurnal</a>
+      <a href="/explore.html" class="active">Eksplorasi</a>
+      <a href="/stats.html">Statistik</a>
+      <a href="/settings.html">Pengaturan</a>
+    </nav>
+  </header>
+
+  <main class="container">
+    <section class="card">
+      <h2>Template Mimpi</h2>
+      <ul class="dream-list" id="exploreList">
+        <li><span>Karir: Menjadi Frontend Dev</span> <button class="btn-primary" data-t="Karir: Menjadi Frontend Dev">Gunakan</button></li>
+        <li><span>Finansial: Dana Darurat 6x</span> <button class="btn-primary" data-t="Finansial: Dana Darurat 6x">Gunakan</button></li>
+        <li><span>Skill: IELTS 7.0</span> <button class="btn-primary" data-t="Skill: IELTS 7.0">Gunakan</button></li>
+      </ul>
+    </section>
+  </main>
+
+  <script type="module">
+    import { addGoal } from './assets/js/modules/storage.js';
+    document.querySelectorAll('#exploreList button').forEach(b=>{
+      b.addEventListener('click', async ()=>{
+        await addGoal({ title: b.dataset.t, category: 'Template', priority: 2 });
+        alert('Template ditambahkan ke Mimpi');
+        location.href = '/goals.html';
+      });
+    });
+  </script>
+</body>
+</html>
